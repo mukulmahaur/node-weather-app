@@ -13,17 +13,17 @@ const messageTwo = document.getElementById('messageTwo')
 
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
-    console.log(weatherInput.value)
+    // console.log(weatherInput.value)
 
     fetch('http://localhost:3000/weather?address='+weatherInput.value).then((response)=>{
     response.json().then((data)=>{
         if(!data.error){
-            console.log(data)
+            // console.log(data)
             messageOne.textContent = data.location
             messageTwo.textContent = data.forecast
             messageOne.style.color = '#006400'
         }else{
-            console.log(data.error)
+            // console.log(data.error)
             messageOne.textContent = data.error
             messageOne.style.color = '#FF0000'
         }        
