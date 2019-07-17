@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     // console.log(weatherInput.value)
 
-    fetch('http://localhost:3000/weather?address='+weatherInput.value).then((response)=>{
+    fetch('/weather?address='+weatherInput.value).then((response)=>{
     response.json().then((data)=>{
         if(!data.error){
             // console.log(data)
