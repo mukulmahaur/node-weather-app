@@ -9,7 +9,7 @@ const forecast = (latitude,longitude,callback) => {
         }else if(body.error){
             callback(`${body.error}`,undefined)
         }else{
-            callback(undefined,`${body.daily.data[0].summary} Current temperature in Gurgaon is ${body.currently.temperature} degrees Celsius and precipitation chances are ${body.currently.precipProbability*100}%`)
+            callback(undefined,`${body.daily.data[0].summary} Current temperature in Gurgaon is ${body.currently.temperature} degrees Celsius and precipitation chances are ${body.currently.precipProbability*100}%. Highest Temperature is ${body.daily.data[0].temperatureHigh} and lowest temperature is ${body.daily.data[0].temperatureLow}`)
         }
     })
 }
